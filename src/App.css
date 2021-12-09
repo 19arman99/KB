@@ -1,0 +1,351 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("Roboto-Regular.ttf");
+}
+.App-body{
+  height: 100vh;
+}
+/* Header, Footer */
+header, footer{
+  min-height: 55px;
+  background: #0067A3;
+}
+footer{
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  width: calc(100% - 20px);
+  bottom: 0%;
+  height: auto;
+}
+.footer-title{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+}
+.header-title{
+  position: absolute;
+  width: 331px;
+  height: 26px;
+  left: 6px;
+  top: 10px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 33px;
+  color: #FFFFFF;
+}
+.footer-tasks{
+  margin-right: 36px;
+}
+/* UserSwitch */
+.header-user{
+  position: absolute;
+  top: 5px;
+  right: 2px;
+  width: 70px;
+  height: 70px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: url("../src/Component/images/user-menu-down.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.header-user.show{
+  position: absolute;
+  top: 5px;
+  right: 2px;
+  width: 70px;
+  height: 70px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: url("../src/Component/images/user-menu-up.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.header-user-switch{
+  display: none;
+  position: absolute;
+  top: 65px;
+  right:15px;
+  width: 100px;
+  height: 50px;
+  background-color: white;
+  z-index: 2;
+}
+.header-user-switch.show{
+  display: block;
+}
+.arrowUser{
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 45px;
+  width: 11px;
+  height: 11px;
+  background: white;
+  transform: rotate(45deg);
+}
+.arrowUser.show{
+  display: block;
+}
+.header-user1, .header-user2{
+  position: absolute;
+  right: 0px;
+  width: 100%;
+  background: none;
+  border: none;
+  font-size: 14px;
+  text-align: left;
+  padding: 2px;
+  cursor: pointer;
+}
+.header-user1:hover, .header-user2:hover{
+  background: #0067A3;
+  color: white;
+}
+.header-user1{
+  top: 5px;
+}
+.header-user2{
+  top: 25px;
+}
+
+@media screen and (max-width: 560px) {
+  .footer-title{
+    font-size: 15px;
+  }
+  .header-title{
+    width: auto;
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 485px) {
+  footer{
+    display: grid;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 350px) {
+  .header-user, .header-user.show{
+    width: 50px;
+    height: 50px;
+    top: 10px;
+  }
+}
+@media screen and (max-width: 290px) {
+  .header-title{
+    font-size: 15px;
+  }
+  .footer-title {
+    font-size: 11px;
+  }
+}
+
+
+
+
+/*------------------------- MAIN -------------------------*/
+main{
+  height: calc(100vh - 140px);
+}
+/* logOut */
+.selectTheUser{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  color: white;
+  font-size: 20px;
+  transform: translate(-50%, -50%);
+}
+
+/* start */
+.main-grid{
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  margin: 84px 24px 0px;
+  flex-wrap: wrap;
+  position: relative;
+  top: 0%;
+  transform: translateY(-60px);
+}
+
+.main-grid.show{
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .main-grid{
+    justify-content: center;
+  }
+}
+
+.main-grid-item{
+  height: 100%;
+  width: 20%;
+  min-width: 200px;
+  padding: 12px;
+  background: #EBECF0;
+  border-radius: 10px;
+}
+.main-grid-item:last-child{
+  margin-bottom: 24px;
+}
+
+.main-grid-title{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  margin-bottom: 15px;
+}
+
+/* + AddCard */
+.addCard, .addCard-submit, .edit, .addDescription{
+  display: block;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #5E6C84;
+  padding: 5px 2px;
+  border: none;
+  background: none;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+.addCard-submit{
+  display: none;
+  background: white;
+}
+.edit, .addDescription{
+  margin-bottom: 20px;
+  color: white;
+  background: #5E6C84;
+}
+.addDescription{
+  background: #0067A3;
+}
+.addCard:hover{
+  color: white;
+  background: #b0b0b0;
+}
+.addCard-submit:hover{
+  color: white;
+  background: #0067A3;
+}
+
+/* Select */
+.select_btn{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  text-align: left;
+  width: 100%;
+  height: auto;
+  margin: 15px 0;
+  padding: 5px 2px;
+  background: #FFFFFF;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+/* item */
+.item{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  text-align: left;
+  width: 100%;
+  height: auto;
+  margin: 15px 0;
+  padding: 5px 2px;
+  background: #FFFFFF;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+.item:hover{
+  background: #d4d4d4;
+}
+
+/* Информация об Item */
+.itemInfo{
+  position: relative;
+  display: none;
+  margin: 26px;
+  background-color: white;
+  height: 100%;
+  padding: 22px;
+}
+.itemInfo.show{
+  display: block;
+}
+/* название */
+.itemInfo-title{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+/* описание */
+.itemInfo-description{
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+}
+/* кнопка добавить описание и инпут */
+.newDescription{
+  display: none;
+}
+.newDescription.show{
+  display: block;
+}
+.inputDescription{
+  display: block;
+  border: none;
+  border-bottom: 1px solid black;
+  margin-bottom: 20px;
+  width: 100%;
+}
+/* крестик */
+.closeItem{
+  position: absolute;
+  top: 20px;
+  right: 3%;
+  font-size: 32px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.inputAdd{
+  width: 100%;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+}
