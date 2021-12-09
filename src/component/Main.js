@@ -1,6 +1,6 @@
 import React, { createElement } from 'react'
-import Header from '../Component/Header'
-import MainStart from '../Component/MainStart'
+import Header from '../component/Header'
+import MainStart from '../component/MainStart'
 import UserSwitch from './UserSwitch'
 
 
